@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choice of Social Media</title>
+    <style>
+        select.single {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+        }
+
+    </style>
+</head>
+<body>
+    <div id="tab3">Loading</div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script>
+    var colleges = ['BCLA','CBA','SOE','SFTV','LLS','CFA','CSE'];
+    //load JSON data
+    $.getJSON('socialMediaAccounts.json', function(result){
+        //console.log(result);
+        colleges.forEach(function(entry) {
+            if (result[entry] !== undefined){
+                //alert(entry + " doesn't have social media accounts.");
+                var container = $('<div><span>Facebook</span></div>');
+                var cell;
+                if ( result[entry]['YouTube'] !== undefined){
+                    cell = $("<select><option value='https://www.facebook.com/lmula'>LMU Facebook</option>"
+                                      +"<option value=result[entry]['Facebook']>" + entry + " Facebook</option> </select>");
+
+                } else {
+                    cell = $("<select><option value='https://www.facebook.com/lmula'>LMU Facebook</option></select>");
+                }
+                cell.appendTo(container);
+                container.appendTo($('#tab3'));
+            }
+            $("select").each(function( index ) {
+                //console.log( index + ": " + $( this ).text() );
+                if($(this).children().length === 1){
+                    $(this).addClass('single');
+                }
+            });
+        });
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
