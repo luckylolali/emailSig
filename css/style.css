@@ -1,0 +1,479 @@
+html{
+    		padding: 0;
+			margin: 0;
+		}
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		#sigform_container{
+			width: 1278px;
+			height: 580px;
+			overflow: hidden;
+			margin: 0px auto;
+		}
+		#sigform_container input:focus,
+		#sigform_container select:focus,
+		#sigform_container textarea:focus,
+		#sigform_container .sigform_preview a {
+		  outline-color: transparent;
+		  outline-style: none;
+		}
+		.sigform_cell{
+			font-family: 'Open Sans', sans-serif;
+			font-size: 16px;
+			width:  1278px;
+			height:  580px;
+			background: #fff;
+		}
+		.sigform_left{
+			float: left;
+			height: 580px;
+			width: 639px;
+			background: #efeff1;
+		}
+		.sigform_left_padding{
+			padding: 25px 50px;
+		}
+		.sigform_left_contents{
+			padding: 25px;
+		}
+		.sigform_arrow{
+			float: left;
+			width: 24px;
+			height: 580px;
+			background: #fff url('../images/sigform_arrow.gif') no-repeat center center;
+		}
+		.sigform_right{
+			float: left;
+			height: 580px;
+			width: 615px;
+			background: #fff;
+		}
+		.sigform_right:after {
+			content:'';
+			display:block;
+			clear: both;
+			padding-bottom: 20px;
+		}
+		.sigform_right_pad{
+			padding: 18px;
+		}
+		.sigform_steps{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			font-size: 13px;
+		}
+		.sigform_steps li{
+			float: left;
+			color: #666666;
+			margin-right: 30px;
+		}
+
+		.sigform_steps li.current{
+			font-weight: bolder;
+		}
+		.sigform_steps li.sigform_last_step{
+			margin-right: 0;
+		}
+
+		.sigform_steps li a,
+		.sigform_steps li a:visited,
+		.sigform_steps li a:active{
+			color: #666666;
+			text-decoration: none;
+		}
+		.sigform_steps li a:hover{
+			color: #696969;
+			text-decoration: none;
+		}
+		.sigform_steps:after {
+			content:'';
+			display:block;
+			clear: both;
+			padding-bottom: 20px;
+		}
+		.sigform_current_step{
+			/* franklin itc pro thin */
+			font-size: 36px;
+			color: #000;
+			line-height: 36px;
+		}
+		.sigform_current_step span{
+			display: inline-block;
+			background: #fff;
+			padding: 10px;
+			border-radius: 36px;
+			margin-right: 15px;
+			width: 56px;
+			text-align: center;
+		}
+		.sigform_lbl{
+			font-size: 14px;
+		}
+		.sigform_lbl span{
+			color: #a82a27;
+		}
+		.sigform_fld{
+			border: 1px solid #999999;
+			background: #fff;
+		}
+		.sigform_fld input{
+			padding: 5px;
+			margin: 0;
+			border: 0;
+			background: none;
+			box-sizing: border-box;
+			width: 100%;
+			font-size: 12px;
+			line-height: 14px;
+			color: #666;
+		}
+		.sigform_fld select{
+			box-sizing: border-box;
+			padding: 5px;
+			margin: 0;
+			border: 0;
+			width: 100%;
+			box-shadow: none;
+			background-color: #fff;
+			background-image: url('../images/email-sig-dropdown-arrow.gif');
+			background-position: right center;
+			background-repeat:   no-repeat;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			white-space: nowrap;
+		}
+		.clearfix{
+			clear:both;
+		}
+		.sigform_row{
+			margin-bottom: 10px;
+		}
+		.sigform_firstname{
+			float: left;
+			width: 182px;
+			margin-right: 9px;
+		}
+		.sigform_mi{
+			float: left;
+			width: 52px;
+			margin-right: 9px;
+		}
+		.sigform_lastname{
+			float: left;
+			width: 237px;
+		}
+		.sigform_lastname:after{
+			content:'';
+			display:block;
+			clear: both;
+		}
+		.sigform_5050{
+			float: left;
+			width: 239px;
+			margin-right: 9px;
+		}
+		.sigform_5050:nth-child(2) {
+			margin-right: 0;
+		}
+		.no_right_margin{
+			margin-right: 0;
+		}
+
+		.sigform_preview_title{
+			color: #164d6d;
+			font-weight: bold;
+			font-size: 30px;
+			margin-bottom: 40px;
+		}
+		.sigform_preview{
+			padding-left: 185px;
+			padding:right 20px;
+			height: 430px;
+		}
+		.sigform_instruction_links,
+		.sigform_instruction_links a,
+		.sigform_instruction_links a:hover,
+		.sigform_instruction_links a:visited,
+		.sigform_instruction_links a:active {
+			color: #164d6d;
+			text-decoration: none;
+			display: block;
+			margin-bottom: 10px;
+		}
+		.sigform_btn_left{
+			float: left;
+			width: 50%;
+		}
+		.sigform_btn_right{
+			float: left;
+			width: 50%;
+			text-align: right;
+		}
+		.sigform_btn_right:after {
+			content:'';
+			display:block;
+			clear: both;
+			padding-bottom: 20px;
+		}
+		.sigform_btn_left  a,
+		.sigform_btn_left  a:visited,
+		.sigform_btn_left  a:hover,
+		.sigform_btn_left  a:active,
+		.sigform_btn_right a,
+		.sigform_btn_right a:visited,
+		.sigform_btn_right a:hover,
+		.sigform_btn_right a:active{
+			display: inline-block;
+			width: 172px;
+			border: 1px solid #000;
+			color: #000;
+			padding: 10px;
+			border-radius: 5px;
+			text-align: center;
+			text-decoration: none;
+			font-weight: bold;
+			line-height: 16px;
+			font-size: 14px;
+		}
+		/*
+		.sigform_fld input.sigform_phone_1,
+		.sigform_fld input.sigform_phone_2{
+			width: 54px;
+			margin-right: 10px;
+		}
+		.sigform_fld input.sigform_phone_3{
+			width: 54px;
+			margin-right: 10px;
+		}
+		*/
+
+		.sigform_phone_1{
+			float: left;
+			width: 54px;
+			margin-right: 10px;
+		}
+		.sigform_phone_2{
+			float: left;
+			width: 54px;
+			margin-right: 10px;
+		}
+		.sigform_phone_3{
+			float: left;
+			width: 111px;
+		}
+		.sigform_phone_3:after{
+			content:'';
+			display:block;
+			clear: both;
+		}
+		.sigform_preview_status{
+			text-align: center;
+		}
+		.instructions_box{
+			width: 800px;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14px;
+		}
+		.instructions_box li{
+			margin-bottom: 5px;
+		}
+		.instructions_title{
+			font-size: 18px;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+		.sigform_email_error{
+			border-color: #f00;
+		}
+
+		@media only screen and (max-width: 1278px) {
+			#sigform_container{
+				width: 1024px;
+			}
+			.sigform_cell{
+				width:  1024px;
+				font-size: 15px;
+			}
+			.sigform_left{
+				width: 512px;
+			}
+			.sigform_left_padding{
+				/*padding: 25px 50px;*/
+			}
+			.sigform_left_contents{
+				/*padding: 25px;*/
+			}
+			.sigform_right{
+				width: 488px;
+			}
+			.sigform_steps li{
+				margin-right: 15px;
+			    font-size: 11px;
+			}
+
+			.sigform_lbl{
+				font-size: 12px;
+			}
+			.sigform_row{
+				margin-bottom: 15px;
+			}
+			.sigform_firstname{
+				width: 142px;
+			}
+			.sigform_mi{
+				width: 52px;
+			}
+			.sigform_lastname{
+				width: 150px;
+			}
+			.sigform_5050{
+				width: 176px;
+			}
+			.sigform_preview{
+				padding-left: 100px;
+			}
+			.sigform_btn_left  a,
+			.sigform_btn_left  a:visited,
+			.sigform_btn_left  a:hover,
+			.sigform_btn_left  a:active,
+			.sigform_btn_right a,
+			.sigform_btn_right a:visited,
+			.sigform_btn_right a:hover,
+			.sigform_btn_right a:active{
+				width: 152px;
+				font-size: 12px;
+			}
+			.sigform_sm_full_row{
+				width: 100%;
+			}
+			.sigform_sm_full_row .sigform_fld{
+				max-width: 237px;
+			}
+		}
+        
+        /* hide disabled button */
+        .flickity-prev-next-button:disabled {
+            display: none;
+        }
+        
+        /* adjust close icon */
+        .featherlight-close-icon {
+            line-height: 40px;
+            width: 40px;
+            font-size: 28px;
+        }
+
+		/* fix height of viewport */
+		.flickity-viewport {
+			height: 580px;
+		}
+
+		@media only screen 
+		  and (min-device-width: 768px) 
+		  and (max-device-width: 1024px) 
+		  and (orientation: portrait) 
+		  and (-webkit-min-device-pixel-ratio: 1) {
+
+		  	#sigform_container{
+		  		width: 768px;
+		  		height: 700px;
+		  	}
+		  	.sigform_cell{
+		  		width:  768px;
+		  		height: 700px;
+		  		font-size: 15px;
+		  	}
+		  	.sigform_left{
+		  		width: 384px;
+		  		height: 700px;
+		  	}
+		  	.sigform_left_padding{
+		  		padding-right: 15px;
+		  		padding-top: 18px;
+		  	}
+		  	.sigform_left_contents{
+		  		/*padding: 25px;*/
+		  	}
+		  	.sigform_preview_title{
+		  		line-height: 56px;
+		  	}
+		  	.sigform_arrow{
+		  		height: 700px;
+		  	}
+		  	.sigform_right{
+		  		width: 359px;
+		  		height: 700px;
+		  	}
+		  	.sigform_steps{
+		  		display:none;
+		  	}
+
+		  	.sigform_steps li{
+		  		float: none;
+		  	}
+
+		  	.sigform_current_step {
+		  	    font-size: 30px;
+		  	}
+		  	.sigform_current_step span{
+		  		width: 36px;
+		  	}
+
+		  	.sigform_lbl{
+		  		font-size: 12px;
+		  	}
+		  	.sigform_row{
+		  		margin-bottom: 15px;
+		  	}
+		  	.sigform_firstname{
+		  		width: 100%;
+		  		margin-bottom: 15px;
+		  	}
+		  	.sigform_mi{
+		  		width: 52px;
+		  		margin-bottom: 15px;
+		  	}
+		  	.sigform_lastname{
+		  		width: 100%;
+		  	}
+		  	.sigform_5050{
+		  		width: 100%;
+		  	}
+		  	.sigform_preview{
+		  		padding-left: 10px;
+		  	}
+		  	.sigform_btn_left  a,
+		  	.sigform_btn_left  a:visited,
+		  	.sigform_btn_left  a:hover,
+		  	.sigform_btn_left  a:active,
+		  	.sigform_btn_right a,
+		  	.sigform_btn_right a:visited,
+		  	.sigform_btn_right a:hover,
+		  	.sigform_btn_right a:active{
+		  		width: 152px;
+		  		font-size: 12px;
+		  	}
+		  	.sigform_sm_full_row{
+		  		width: 100%;
+		  	}
+		  	.sigform_sm_full_row .sigform_fld{
+		  		max-width: 237px;
+		  	}
+
+		  	.sigform_btn_left,
+		  	.sigform_btn_right{
+		  		float: none;
+		  		width: 300px;
+		  		margin: 0px auto;
+		  		text-align: left;
+		  		margin-bottom: 20px;
+		  	}
+
+		  	.sigform_building{
+		  		margin-bottom:15px;
+		  	}
+		}

@@ -1,0 +1,14 @@
+{firstname} {mi}{lastname}
+{title_1}{title_2}
+
+{department_1}{department_2}
+{organization}
+
+{building}{suite}
+1 LMU Drive
+Los Angeles, CA 90045-2659
+
+www.lmu.edu
+
+Office: {office}{fax_str}{mobile_str}
+Email: {email}
